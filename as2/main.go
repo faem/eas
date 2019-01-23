@@ -17,13 +17,42 @@ func main() {
 		TLSConfig: GenerateTLSConfig(),
 	}
 
-	log.Fatalln(server.ListenAndServeTLS("cert/as2-tls.crt", "cert/as2-tls.key"))
+	log.Fatalln(server.ListenAndServeTLS("cert/database-tls.crt", "cert/database-tls.key"))
 }
 
 
 func CreateRouter() *mux.Router {
+	rhCACertPool := x509.NewCertPool()
+	rhCert,err := ioutil.ReadFile("cert/requestheader-ca.crt")
+	if err != nil{
+		panic(err)
+	}
+	rhCACertPool.AppendCertsFromPEM(rhCert)
+
+	as1Cert,err := ioutil.ReadFile("cert/apiserver-ca.crt")
+	if err != nil{
+		panic(err)
+	}
+	rhCACertPool.AppendCertsFromPEM(as1Cert)
+
 	router := mux.NewRouter()
+
 	router.HandleFunc("/as2", func(writer http.ResponseWriter, request *http.Request) {
+		/*user := "system:anonymous"
+		src := "-"*/
+		if len(request.TLS.PeerCertificates) > 0 { // client TLS was used
+			opts := x509.VerifyOptions{
+				Roots:     rhCACertPool,
+				KeyUsages: []x509.ExtKeyUsage{x509.ExtKeyUsageClientAuth},
+			}
+			if _, err := request.TLS.PeerCertificates[0].Verify(opts); err != nil {
+				//user = request.TLS.PeerCertificates[0].Subject.CommonName // user name from client cert
+				//src = "Client-Cert-CN"
+			} else {
+				//user = request.Header.Get("X-Remote-User") // user name from header value passed by apiserver
+				//src = "X-Remote-User"
+			}
+		}
 		writer.Write([]byte("This is server 2"))
 		fmt.Println("This is server 2")
 	})
@@ -55,7 +84,7 @@ func GenerateTLSConfig() *tls.Config{
 	}
 
 	caCertPool := x509.NewCertPool()
-	cacert, err := ioutil.ReadFile("cert/as2-ca.crt")
+	cacert, err := ioutil.ReadFile("cert/database-ca.crt")
 	if err != nil{
 		log.Fatal(err)
 	}
