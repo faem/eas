@@ -3,28 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e868528-8971-483d-bb4b-f1a56fc880c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/as-1" beforeDir="false" afterPath="$PROJECT_DIR$/as-1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/as-2" beforeDir="false" afterPath="$PROJECT_DIR$/as-2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/as1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/as1/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/as2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/as2/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/admin-database.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/admin-database.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/apiserver-ca.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/apiserver-ca.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/apiserver-tls.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/apiserver-tls.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/cert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/database-ca.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/database-ca.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/database-tls.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/database-tls.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/fahim-apiserver.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/fahim-apiserver.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/gen-cert.go" beforeDir="false" afterPath="$PROJECT_DIR$/cert/gen-cert.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/requestheader-apiserver.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/requestheader-apiserver.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/requestheader-ca.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/requestheader-ca.key" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,44 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cert/gen-cert.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1314">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
-              <folding>
-                <element signature="e#14#103#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/as2/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#14#118#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/as1/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
-              <folding>
-                <element signature="e#14#132#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,6 +33,7 @@
       <find>apiserver</find>
       <find>CreateClient</find>
       <find>rh-as1</find>
+      <find>log.pr</find>
     </findStrings>
     <replaceStrings>
       <replace>as2</replace>
@@ -141,6 +83,11 @@
               <item name="eas" type="b2602c69:ProjectViewProjectNode" />
               <item name="eas" type="462c0819:PsiDirectoryNode" />
               <item name="as1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eas" type="462c0819:PsiDirectoryNode" />
+              <item name="as2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="eas" type="b2602c69:ProjectViewProjectNode" />
@@ -235,7 +182,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="1920" height="967" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496997" visible="true" weight="0.2553648" />
       <window_info id="Favorites" order="1" sideWeight="0.503003" side_tool="true" weight="0.25506938" />
@@ -250,7 +196,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32948583" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4994664" visible="true" weight="0.30086315" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4994664" weight="0.95314425" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053364" side_tool="true" weight="0.33053514" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -270,9 +216,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cert/as1-ca.crt" />
-    <entry file="file://$PROJECT_DIR$/trash/apiserver-ca.crt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/trash/apiserver-ca.crt" />
     <entry file="file://$PROJECT_DIR$/../github.com/gorilla/mux/mux.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -316,32 +260,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/as1/main.go" />
+    <entry file="file://$PROJECT_DIR$/as2/main.go" />
     <entry file="file://$PROJECT_DIR$/cert/gen-cert.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
           <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="e#14#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/as2/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#14#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/as1/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
-          <folding>
-            <element signature="e#14#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
