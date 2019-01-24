@@ -8,23 +8,23 @@ import (
 	"net"
 )
 
-//var PATH = os.Getenv("Home")+"/go/src/eas/cert"
 
 func main() {
-	CreateCA("apiserver")
-	CreateCA("database")
-	CreateCA("requestheader")
-	CreateClient("apiserver", "127.0.0.1")
-	CreateClient("database", "127.0.0.2")
-	CreateUser("requestheader","apiserver")
+	CreateCA("as1")
+	CreateCA("as2")
+	CreateCA("rh")
 
-	CreateUser("fahim", "apiserver")
-	CreateUser("admin","database")
+	CreateServerClient("as1", "127.0.0.1")
+	CreateServerClient("as2", "127.0.0.2")
+
+	CreateUserClient("rh","as1")
+	CreateUserClient("fahim", "as1")
+	CreateUserClient("masud","as2")
 }
+
 
 func CreateCA(name string)  {
 	key, err := cert.NewPrivateKey()
-
 	printError(err)
 
 	crt, err := cert.NewSelfSignedCACert(cert.Config{
@@ -39,11 +39,13 @@ func CreateCA(name string)  {
 
 	err = ioutil.WriteFile(name+"-ca.crt", cert.EncodeCertPEM(crt), 0755)
 	printError(err)
+
 	err = ioutil.WriteFile(name+"-ca.key", cert.EncodePrivateKeyPEM(key), 0755)
 	printError(err)
 }
 
-func CreateClient(name string, ip string)  {
+
+func CreateServerClient(name string, ip string)  {
 	key, err := cert.NewPrivateKey()
 	printError(err)
 
@@ -69,11 +71,13 @@ func CreateClient(name string, ip string)  {
 
 	err = ioutil.WriteFile(name+"-tls.crt", cert.EncodeCertPEM(crt), 0755)
 	printError(err)
+
 	err = ioutil.WriteFile(name+"-tls.key", cert.EncodePrivateKeyPEM(key), 0755)
 	printError(err)
 }
 
-func CreateUser(name string, server string)  {
+
+func CreateUserClient(name string, server string)  {
 	key, err := cert.NewPrivateKey()
 	printError(err)
 
@@ -97,9 +101,10 @@ func CreateUser(name string, server string)  {
 	}, key, cacrt[0], cakey.(*rsa.PrivateKey))
 	printError(err)
 
-	err = ioutil.WriteFile(name+"-"+server+".crt", cert.EncodeCertPEM(crt), 0755)
+	err = ioutil.WriteFile(server+"-"+name+".crt", cert.EncodeCertPEM(crt), 0755)
 	printError(err)
-	err = ioutil.WriteFile(name+"-"+server+".key", cert.EncodePrivateKeyPEM(key), 0755)
+
+	err = ioutil.WriteFile(server+"-"+name+".key", cert.EncodePrivateKeyPEM(key), 0755)
 	printError(err)
 }
 
