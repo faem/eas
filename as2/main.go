@@ -22,12 +22,8 @@ func main() {
 
 
 func CreateRouter() *mux.Router {
+	log.Println("Router created")
 	rhCACertPool := x509.NewCertPool()
-	rhCert,err := ioutil.ReadFile("cert/requestheader-ca.crt")
-	if err != nil{
-		panic(err)
-	}
-	rhCACertPool.AppendCertsFromPEM(rhCert)
 
 	as1Cert,err := ioutil.ReadFile("cert/apiserver-ca.crt")
 	if err != nil{
@@ -35,12 +31,21 @@ func CreateRouter() *mux.Router {
 	}
 	rhCACertPool.AppendCertsFromPEM(as1Cert)
 
+	rhCert,err := ioutil.ReadFile("cert/requestheader-ca.crt")
+	if err != nil{
+		panic(err)
+	}
+	rhCACertPool.AppendCertsFromPEM(rhCert)
+
+
+
 	router := mux.NewRouter()
 
 	router.HandleFunc("/as2", func(writer http.ResponseWriter, request *http.Request) {
 		/*user := "system:anonymous"
 		src := "-"*/
-		if len(request.TLS.PeerCertificates) > 0 { // client TLS was used
+		log.Println("ApiServer 2 is called")
+		/*if len(request.TLS.PeerCertificates) > 0 { // client TLS was used
 			opts := x509.VerifyOptions{
 				Roots:     rhCACertPool,
 				KeyUsages: []x509.ExtKeyUsage{x509.ExtKeyUsageClientAuth},
@@ -48,11 +53,13 @@ func CreateRouter() *mux.Router {
 			if _, err := request.TLS.PeerCertificates[0].Verify(opts); err != nil {
 				//user = request.TLS.PeerCertificates[0].Subject.CommonName // user name from client cert
 				//src = "Client-Cert-CN"
+				log.Println("client-Cert-CN")
 			} else {
 				//user = request.Header.Get("X-Remote-User") // user name from header value passed by apiserver
 				//src = "X-Remote-User"
+				log.Println("X-Remote-User")
 			}
-		}
+		}*/
 		writer.Write([]byte("This is server 2"))
 		fmt.Println("This is server 2")
 	})
@@ -76,7 +83,7 @@ func GenerateTLSConfig() *tls.Config{
 			tls.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
 		},
 		PreferServerCipherSuites:    true,
-		SessionTicketsDisabled:      false,
+		SessionTicketsDisabled:      true,
 		MinVersion:                  tls.VersionTLS12,
 		ClientAuth: 				 tls.VerifyClientCertIfGiven,
 		NextProtos: 			     []string{"h2", "http/1.1"},
@@ -85,6 +92,11 @@ func GenerateTLSConfig() *tls.Config{
 
 	caCertPool := x509.NewCertPool()
 	cacert, err := ioutil.ReadFile("cert/database-ca.crt")
+	if err != nil{
+		log.Fatal(err)
+	}
+	caCertPool.AppendCertsFromPEM(cacert)
+	cacert, err = ioutil.ReadFile("cert/requestheader-ca.crt")
 	if err != nil{
 		log.Fatal(err)
 	}

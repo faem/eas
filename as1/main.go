@@ -13,13 +13,13 @@ import (
 )
 
 func main() {
-	proxy := true
+	proxy := false
 	server := http.Server{
 		Addr: "127.0.0.1:8000",
 		Handler: CreateRouter(proxy),
 		TLSConfig: GenerateTLSConfig(),
 	}
-	log.Fatalln(server.ListenAndServeTLS("cert/apiserver-tls.crt", "cert/apiserver-tls.key"))
+	log.Fatalln(server.ListenAndServeTLS("cert/database-tls.crt", "cert/database-tls.key"))
 }
 
 
@@ -73,6 +73,7 @@ func HandleProxy(r *mux.Router)  {
 		fmt.Printf("forwarding request to %v\n", u.String())
 
 		req, _ := http.NewRequest(r.Method, u.String(), nil)
+		log.Println(len(r.TLS.PeerCertificates))
 		if len(r.TLS.PeerCertificates) > 0 {
 			req.Header.Set("X-Remote-User", r.TLS.PeerCertificates[0].Subject.CommonName)
 		}
@@ -102,7 +103,7 @@ func GenerateTLSConfig() *tls.Config{
 			tls.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
 		},
 		PreferServerCipherSuites:    true,
-		SessionTicketsDisabled:      false,
+		SessionTicketsDisabled:      true,
 		MinVersion:                  tls.VersionTLS12,
 		ClientAuth: 				 tls.VerifyClientCertIfGiven,
 		NextProtos: 			     []string{"h2", "http/1.1"},

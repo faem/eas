@@ -3,20 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="2e868528-8971-483d-bb4b-f1a56fc880c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/as-2" beforeDir="false" afterPath="$PROJECT_DIR$/as-2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/as1/as1" beforeDir="false" afterPath="$PROJECT_DIR$/as1/as1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/as1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/as1/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/as2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/as2/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as1-ca.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as1-ca.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as1-ca.srl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as1-tls.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as1-tls.csr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as1-tls.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as2-ca.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as2-ca.key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as2-ca.srl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as2-tls.crt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as2-tls.csr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert/as2-tls.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/apiserver-ca.crt" beforeDir="false" afterPath="$PROJECT_DIR$/trash/apiserver-ca.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/apiserver-ca.key" beforeDir="false" afterPath="$PROJECT_DIR$/trash/apiserver-ca.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/apiserver-john.crt" beforeDir="false" afterPath="$PROJECT_DIR$/trash/apiserver-john.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/apiserver-john.key" beforeDir="false" afterPath="$PROJECT_DIR$/trash/apiserver-john.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/apiserver-tls.crt" beforeDir="false" afterPath="$PROJECT_DIR$/trash/apiserver-tls.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/apiserver-tls.key" beforeDir="false" afterPath="$PROJECT_DIR$/trash/apiserver-tls.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/database-ca.crt" beforeDir="false" afterPath="$PROJECT_DIR$/trash/database-ca.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/database-ca.key" beforeDir="false" afterPath="$PROJECT_DIR$/trash/database-ca.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/database-jane.crt" beforeDir="false" afterPath="$PROJECT_DIR$/trash/database-jane.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/database-jane.key" beforeDir="false" afterPath="$PROJECT_DIR$/trash/database-jane.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/database-tls.crt" beforeDir="false" afterPath="$PROJECT_DIR$/trash/database-tls.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/database-tls.key" beforeDir="false" afterPath="$PROJECT_DIR$/trash/database-tls.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/gen-cert.go" beforeDir="false" afterPath="$PROJECT_DIR$/cert/gen-cert.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/requestheader-apiserver.crt" beforeDir="false" afterPath="$PROJECT_DIR$/trash/requestheader-apiserver.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/requestheader-apiserver.key" beforeDir="false" afterPath="$PROJECT_DIR$/trash/requestheader-apiserver.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/requestheader-ca.crt" beforeDir="false" afterPath="$PROJECT_DIR$/trash/requestheader-ca.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cert/requestheader-ca.key" beforeDir="false" afterPath="$PROJECT_DIR$/trash/requestheader-ca.key" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,25 +31,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="eas" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/as1/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-748">
-              <caret line="46" column="49" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="49" />
-              <folding>
-                <element signature="e#14#69#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="304">
+              <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/as2/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="782">
+              <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+              <folding>
+                <element signature="e#14#118#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,17 +60,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cert/cert.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cert/gen-cert.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-348">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#14#60#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cert/gen-cert.go">
+        <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/util/cert/pem.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="213">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
@@ -79,7 +101,14 @@
       <find>rh</find>
       <find>cert</find>
       <find>rhcert</find>
+      <find>log.</find>
+      <find>failed to verify client's certificate</find>
+      <find>database</find>
+      <find>listen</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/..</dir>
+    </dirStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
@@ -89,13 +118,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/cert/cert.sh" />
-        <option value="$PROJECT_DIR$/cert/gen-cert.go" />
         <option value="$PROJECT_DIR$/as2/main.go" />
+        <option value="$PROJECT_DIR$/cert/gen-cert.go" />
         <option value="$PROJECT_DIR$/as1/main.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1920" />
     <option name="y" value="-2" />
     <option name="width" value="1920" />
@@ -110,7 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,28 +163,36 @@
             </path>
             <path>
               <item name="eas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eas" type="462c0819:PsiDirectoryNode" />
+              <item name="trash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eas" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../github.com/tamalsaha/DIY-k8s-extended-apiserver" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cert" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/trash" />
       <recent name="$PROJECT_DIR$/cert" />
     </key>
   </component>
@@ -172,6 +208,42 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Go Build.go build main.go (1)">
+    <configuration name="go build gen-cert.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="eas" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/cert/gen-cert.go" />
+      <package value="eas" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="eas" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/as1/main.go" />
+      <package value="eas" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="eas" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/as2/main.go" />
+      <package value="eas" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go (1)" />
+        <item itemvalue="Go Build.go build gen-cert.go" />
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -182,22 +254,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
+    <frame x="1920" y="-2" width="1920" height="1082" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496997" visible="true" weight="0.1782284" />
+      <window_info id="Favorites" order="1" sideWeight="0.503003" side_tool="true" weight="0.25506938" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32948583" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4994664" visible="true" weight="0.33053514" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32948583" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4994664" weight="0.30115426" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053364" side_tool="true" weight="0.33053514" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -209,13 +281,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/go/src/net/http/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1114">
-          <caret line="2867" column="49" selection-start-line="2867" selection-start-column="49" selection-end-line="2867" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/go/src/net/http/client.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-570">
@@ -223,44 +288,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cert/as1-ca.crt">
+    <entry file="file://$PROJECT_DIR$/cert/as1-ca.crt" />
+    <entry file="file://$PROJECT_DIR$/trash/apiserver-ca.crt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/gorilla/mux/mux.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        <state relative-caret-position="181">
+          <caret line="161" selection-start-line="161" selection-end-line="161" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cert/gen-cert.go">
+    <entry file="file:///usr/local/go/src/net/http/h2_bundle.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="173">
+          <caret line="5876" selection-start-line="5876" selection-end-line="5876" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/net/http/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="2966" column="45" selection-start-line="2966" selection-start-column="45" selection-end-line="2966" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="1332" selection-start-line="1332" selection-end-line="1332" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/proc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/util/cert/pem.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cert/cert.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cert/apiserver-ca.crt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/as1/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748">
-          <caret line="46" column="49" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="49" />
-          <folding>
-            <element signature="e#14#69#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/as2/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="782">
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+          <folding>
+            <element signature="e#14#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/as1/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cert/gen-cert.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-348">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#14#60#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
