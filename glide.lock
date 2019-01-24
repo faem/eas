@@ -1,0 +1,12 @@
+hash: b473c5eb75729b08ee4eae848ed587be0ac04ac49d39c4efc3a9bc1b5de44824
+updated: 2019-01-24T20:27:26.9737704+06:00
+imports:
+- name: github.com/gorilla/context
+  version: 51ce91d2eaddeca0ef29a71d766bb3634dadf729
+- name: github.com/gorilla/mux
+  version: e3702bed27f0d39777b0b37b664b6280e8ef8fbf
+- name: k8s.io/client-go
+  version: e64494209f554a6723674bd494d69445fb76a1d4
+  subpackages:
+  - util/cert
+testImports: []

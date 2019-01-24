@@ -13,10 +13,13 @@ import (
 func main() {
 	CreateCA("apiserver")
 	CreateCA("database")
+	CreateCA("requestheader")
 	CreateClient("apiserver", "127.0.0.1")
 	CreateClient("database", "127.0.0.2")
+	CreateUser("requestheader","apiserver")
 
 	CreateUser("fahim", "apiserver")
+	CreateUser("admin","database")
 }
 
 func CreateCA(name string)  {
@@ -60,7 +63,7 @@ func CreateClient(name string, ip string)  {
 				net.ParseIP(ip),
 			},
 		},
-		Usages: []x509.ExtKeyUsage{x509.ExtKeyUsageClientAuth},
+		Usages: []x509.ExtKeyUsage{x509.ExtKeyUsageServerAuth},
 	}, key, cacrt[0], cakey.(*rsa.PrivateKey))
 	printError(err)
 

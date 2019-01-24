@@ -13,13 +13,13 @@ import (
 )
 
 func main() {
-	proxy := false
+	proxy := true
 	server := http.Server{
 		Addr: "127.0.0.1:8000",
 		Handler: CreateRouter(proxy),
 		TLSConfig: GenerateTLSConfig(),
 	}
-	log.Fatalln(server.ListenAndServeTLS("cert/database-tls.crt", "cert/database-tls.key"))
+	log.Fatalln(server.ListenAndServeTLS("cert/apiserver-tls.crt", "cert/apiserver-tls.key"))
 }
 
 
@@ -93,8 +93,11 @@ func HandleProxy(r *mux.Router)  {
 }
 
 func GenerateTLSConfig() *tls.Config{
-	tlsConfig :=  &tls.Config{
-		CipherSuites:                []uint16{
+	tlsConfig := &tls.Config{
+		PreferServerCipherSuites: true,
+		MinVersion:               tls.VersionTLS12,
+		SessionTicketsDisabled:   true,
+		CipherSuites: []uint16{
 			tls.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
 			tls.TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
 			tls.TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305, // Go 1.8 only
@@ -102,19 +105,17 @@ func GenerateTLSConfig() *tls.Config{
 			tls.TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
 			tls.TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
 		},
-		PreferServerCipherSuites:    true,
-		SessionTicketsDisabled:      true,
-		MinVersion:                  tls.VersionTLS12,
-		ClientAuth: 				 tls.VerifyClientCertIfGiven,
-		NextProtos: 			     []string{"h2", "http/1.1"},
+		ClientAuth: tls.VerifyClientCertIfGiven,
+		NextProtos: []string{"h2", "http/1.1"},
 	}
 
 	caCertPool := x509.NewCertPool()
-	cacert, err := ioutil.ReadFile("cert/apiserver-ca.crt")
-	if err != nil{
+	caCert, err := ioutil.ReadFile("cert/apiserver-ca.crt")
+	if err != nil {
 		log.Fatal(err)
 	}
-	caCertPool.AppendCertsFromPEM(cacert)
+	caCertPool.AppendCertsFromPEM(caCert)
+
 	tlsConfig.ClientCAs = caCertPool
 	tlsConfig.BuildNameToCertificate()
 

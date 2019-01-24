@@ -1,0 +1,8 @@
+package: eas
+import:
+- package: github.com/gorilla/mux
+  version: ^1.6.2
+- package: k8s.io/client-go
+  version: ^10.0.0
+  subpackages:
+  - util/cert
